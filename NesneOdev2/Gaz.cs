@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace NesneOdev2
 {
-    public class Sıvı : ISıvı
+    public class Gaz : IGaz
     {
-        private double carpan = 1.25;
+        private double carpan = 1.1;
         private double ozgulAgirlik;
-        private int tonaj;
+        private string tipi;
         private string urunAdi;
-        private int eklenekUcret = 0;
+        private int eklenekUcret = 4000;
         private int sonuc;
         public double Carpan
         {
@@ -20,7 +20,7 @@ namespace NesneOdev2
             {
                 return carpan;
             }
-        }   
+        }
         public string UrunAdi
         {
             get
@@ -32,7 +32,7 @@ namespace NesneOdev2
                 urunAdi = value;
             }
         }
-        public double OzgulAgirlik
+        public double PaketHacmi
         {
             get
             {
@@ -43,15 +43,15 @@ namespace NesneOdev2
                 ozgulAgirlik = value;
             }
         }
-        public int Tonaj
+        public string Tipi
         {
             get
             {
-                return tonaj;
+                return tipi;
             }
             set
             {
-                tonaj = value;
+                tipi = value;
             }
         }
         public int EklenecekUcret
@@ -63,10 +63,10 @@ namespace NesneOdev2
         }
         public double Sonuc(int mesafe)
         {
-            return (Carpan*Tonaj*mesafe) + EklenecekUcret;
+            return (Carpan * PaketHacmi * mesafe) + EklenecekUcret;
         }
         public void Yazdir(int mesafe)
-        { 
+        {
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("****************************************");

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,17 +16,14 @@ namespace NesneOdev2
         public string Mail { get; set; }
         public string WebAdresi { get; set; }
         public string VergiNo { get; set; }
-        public string SiparisTarihi { get; set; }
+        public string SiparisTarihi { get; set; } 
+        public int KM { get; set; }
+
         public void Yazdir()
-        {
-            Console.WriteLine("MusteriAdi : " + MusteriAdi);
-            Console.WriteLine("Adres : " + Adres);
-            Console.WriteLine("Telefon : " + Telefon);
-            Console.WriteLine("Fax : " + Fax);
-            Console.WriteLine("Mail : " + Mail);
-            Console.WriteLine("WebAdresi : " + WebAdresi);
-            Console.WriteLine("VergiNo : " + VergiNo);
-            Console.WriteLine("SiparisTarihi : " + SiparisTarihi);
+        { 
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine("Taşınacak Mesafe : " + KM);
         }
     }
 }

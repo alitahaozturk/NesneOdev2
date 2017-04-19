@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DegerliUrun.cs" />
+    <Compile Include="Gaz.cs" />
     <Compile Include="IUrunOzellikleri.cs" />
+    <Compile Include="Katı.cs" />
     <Compile Include="Kisi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

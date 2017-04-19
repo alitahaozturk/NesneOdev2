@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace NesneOdev2
 {
-    public class Sıvı : ISıvı
+    public class DegerliUrun : IDegerliUrun
     {
-        private double carpan = 1.25;
-        private double ozgulAgirlik;
+        private double carpan = 1.5;
+        private int hacmi;
         private int tonaj;
         private string urunAdi;
-        private int eklenekUcret = 0;
+        private int adet;
+        private int agirlik; 
         private int sonuc;
         public double Carpan
         {
@@ -20,7 +21,7 @@ namespace NesneOdev2
             {
                 return carpan;
             }
-        }   
+        }
         public string UrunAdi
         {
             get
@@ -32,15 +33,37 @@ namespace NesneOdev2
                 urunAdi = value;
             }
         }
-        public double OzgulAgirlik
+        public int Hacmi
         {
             get
             {
-                return ozgulAgirlik;
+                return hacmi;
             }
             set
             {
-                ozgulAgirlik = value;
+                hacmi = value;
+            }
+        }
+        public int Adet
+        {
+            get
+            {
+                return adet;
+            }
+            set
+            {
+                adet = value;
+            }
+        }
+        public int Agirlik
+        {
+            get
+            {
+                return agirlik;
+            }
+            set
+            {
+                agirlik = value;
             }
         }
         public int Tonaj
@@ -54,22 +77,22 @@ namespace NesneOdev2
                 tonaj = value;
             }
         }
-        public int EklenecekUcret
-        {
-            get
-            {
-                return eklenekUcret;
-            }
-        }
         public double Sonuc(int mesafe)
         {
-            return (Carpan*Tonaj*mesafe) + EklenecekUcret;
+            if(Agirlik/Hacmi >= 0.5)
+            {
+                return (Agirlik * Carpan + Hacmi * Carpan) / (2 + mesafe * 1.5);
+            }
+            else
+            {
+                return ((Hacmi * Carpan) + (mesafe * 2));
+            }
         }
         public void Yazdir(int mesafe)
-        { 
+        {
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("****************************************");
+            Console.WriteLine("****************************************"); 
             Console.WriteLine("Toplam Tutar: " + Sonuc(mesafe));
         }
     }
