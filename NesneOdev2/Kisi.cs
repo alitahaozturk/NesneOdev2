@@ -16,14 +16,7 @@ namespace NesneOdev2
         public string Mail { get; set; }
         public string WebAdresi { get; set; }
         public string VergiNo { get; set; }
-        public string SiparisTarihi { get; set; } 
+        public string SiparisTarihi { get; set; }
         public int KM { get; set; }
-
-        public void Yazdir()
-        { 
-            //Console.WriteLine();
-            //Console.WriteLine();
-            //Console.WriteLine("Taşınacak Mesafe : " + KM);
-        }
     }
 }

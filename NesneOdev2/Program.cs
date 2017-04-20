@@ -9,7 +9,7 @@ namespace NesneOdev2
     class Program
     {
         static void Main(string[] args)
-        { 
+        {
             Kisi kisi = new Kisi();
             Console.Write("MusteriAdi :");
             kisi.MusteriAdi = Console.ReadLine();
@@ -79,10 +79,10 @@ namespace NesneOdev2
             Gaz gaz = new Gaz();
             Console.Write("Gaz Ürünün Adı: ");
             gaz.UrunAdi = Console.ReadLine();
-            Console.Write("Gaz Ürünün Tipi: ");
-            gaz.Tipi = Console.ReadLine();
             Console.Write("Gaz Ürünün Paket Hacmi: ");
             gaz.PaketHacmi = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Gaz Ürünün Tipi: ");
+            gaz.Tipi = Console.ReadLine();
             gaz.Yazdir(mesafe);
         }
         private static void DegerliUrunIslemleri(int mesafe)
@@ -97,7 +97,7 @@ namespace NesneOdev2
             Console.Write("Değerli ürünün adedi : ");
             du.Adet = Convert.ToInt32(Console.ReadLine());
             Console.Write("Değerli ürünün adet ağırlığı : ");
-            du.Agirlik = Convert.ToInt32(Console.ReadLine());
+            du.AdetAgirlik = Convert.ToInt32(Console.ReadLine());
             du.Yazdir(mesafe);
         }
     }

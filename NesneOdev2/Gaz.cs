@@ -8,59 +8,16 @@ namespace NesneOdev2
 {
     public class Gaz : IGaz
     {
-        private double carpan = 1.1;
-        private double ozgulAgirlik;
-        private string tipi;
-        private string urunAdi;
-        private int eklenekUcret = 4000;
-        private int sonuc;
-        public double Carpan
-        {
-            get
-            {
-                return carpan;
-            }
-        }
-        public string UrunAdi
-        {
-            get
-            {
-                return urunAdi;
-            }
-            set
-            {
-                urunAdi = value;
-            }
-        }
-        public double PaketHacmi
-        {
-            get
-            {
-                return ozgulAgirlik;
-            }
-            set
-            {
-                ozgulAgirlik = value;
-            }
-        }
-        public string Tipi
-        {
-            get
-            {
-                return tipi;
-            }
-            set
-            {
-                tipi = value;
-            }
-        }
-        public int EklenecekUcret
-        {
-            get
-            {
-                return eklenekUcret;
-            }
-        }
+        public double Carpan { get; } = 1.1;
+
+        public string UrunAdi { get; set; }
+
+        public double PaketHacmi { get; set; }
+
+        public string Tipi { get; set; }
+
+        public int EklenecekUcret { get; } = 4000;
+
         public double Sonuc(int mesafe)
         {
             return (Carpan * PaketHacmi * mesafe) + EklenecekUcret;

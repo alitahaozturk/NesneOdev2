@@ -12,7 +12,6 @@ namespace NesneOdev2
         int Tonaj { get; }
         double Carpan { get; }
         double OzgulAgirlik { get; }
-        int EklenecekUcret { get; }
     }
     interface IKatı
     {
@@ -35,7 +34,7 @@ namespace NesneOdev2
         string UrunAdi { get; }
         int Tonaj { get; }
         int Adet { get; }
-        int Agirlik { get; }
-        int Hacmi { get; } 
+        int AdetAgirlik { get; }
+        int Hacmi { get; }
     }
 }

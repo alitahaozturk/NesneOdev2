@@ -8,59 +8,16 @@ namespace NesneOdev2
 {
     public class Katı : IKatı
     {
-        private double carpan = 1;
-        private double paketHacmi;
-        private int tonaj;
-        private string urunAdi;
-        private int eklenekUcret = 1000;
-        private int sonuc;
-        public double Carpan
-        {
-            get
-            {
-                return carpan;
-            }
-        }
-        public string UrunAdi
-        {
-            get
-            {
-                return urunAdi;
-            }
-            set
-            {
-                urunAdi = value;
-            }
-        }
-        public double PaketHacmi
-        {
-            get
-            {
-                return paketHacmi;
-            }
-            set
-            {
-                paketHacmi = value;
-            }
-        }
-        public int Tonaj
-        {
-            get
-            {
-                return tonaj;
-            }
-            set
-            {
-                tonaj = value;
-            }
-        }
-        public int EklenecekUcret
-        {
-            get
-            {
-                return eklenekUcret;
-            }
-        }
+        public double Carpan { get; } = 1;
+
+        public string UrunAdi { get; set; }
+
+        public double PaketHacmi { get; set; }
+
+        public int Tonaj { get; set; }
+
+        public int EklenecekUcret { get; } = 1000;
+
         public double Sonuc(int mesafe)
         {
             return (Carpan * Tonaj * mesafe) + EklenecekUcret;
